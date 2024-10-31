@@ -34,42 +34,10 @@ const handleStartChatButtonClick = async () => {
   }
 };
 
-const handlePauseChatButtonClick = async () => {
-  try {
-    await personaClient.pause();
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const handleResumeChatButtonClick = async () => {
-  try {
-    await personaClient.resume();
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 const handleStopChatButtonClick = async () => {
   try {
     await personaClient.end();
     chatActive = false;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const handleUpdateState = async (newState: any) => {
-  try {
-    personaClient.updateState(newState);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const handleReactTo = async (thought: any) => {
-  try {
-    personaClient.reactTo(thought);
   } catch (error) {
     console.log(error);
   }

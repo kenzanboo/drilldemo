@@ -1,7 +1,7 @@
  // Start of Selection
 import Speak from "@/components/voice/speak"
 import { Card, CardContent } from "@/components/ui/card"
-import { Drill, Hammer, Truck, HardHat, Phone } from "lucide-react"
+import { Drill, Hammer, Truck, HardHat } from "lucide-react"
 
 export default function Component() {
   return (
@@ -23,7 +23,6 @@ export default function Component() {
         <section className="relative h-[600px] flex items-center justify-center text-white">
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           <img
-                // Start of Selection
                 src="/images/image.webp"
                 alt="Heavy machinery in action"
                 className="absolute inset-0 w-full h-full object-cover"
@@ -94,7 +93,7 @@ export default function Component() {
               ].map((testimonial, index) => (
                 <Card key={index}>
                   <CardContent className="p-6">
-                    <p className="italic mb-4">"{testimonial.quote}"</p>
+                    <p className="italic mb-4">{testimonial.quote}</p>
                     <p className="font-semibold">{testimonial.name}</p>
                     <p className="text-sm text-gray-600">{testimonial.company}</p>
                   </CardContent>
